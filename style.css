@@ -1,0 +1,108 @@
+/* ----------------------------------------------------
+   GLOBAL VARIABLES & FONTS
+---------------------------------------------------- */
+:root {
+  --primary: #0d6efd; /* Bootstrap primary blue */
+  --muted: #6c757d;
+  --bg: #ffffff;
+  --card: #f8f9fa;
+  --radius: 12px;
+
+  /* Font setup */
+  font-family: "Inter", sans-serif;
+  --heading-font: "Montserrat", sans-serif;
+}
+
+/* ----------------------------------------------------
+   BASE STYLES
+---------------------------------------------------- */
+body {
+  background: var(--bg);
+  color: #212529;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Inter", sans-serif;
+}
+
+/* Headings: Professional font */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--heading-font);
+  font-weight: 600;
+}
+
+/* Hero heading spacing */
+.hero h1 {
+  letter-spacing: -1px;
+}
+
+/* ----------------------------------------------------
+   HERO SECTION
+---------------------------------------------------- */
+.hero {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+/* Placeholder avatar */
+.avatar-placeholder {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 6px solid var(--card);
+  box-shadow: 0 6px 18px rgba(13, 110, 253, 0.06);
+}
+
+/* ----------------------------------------------------
+   SKILL CARDS
+---------------------------------------------------- */
+.skill-card {
+  background: var(--card);
+  border: 1px solid rgba(0, 0, 0, 0.04);
+  transition: transform .18s ease, box-shadow .18s ease;
+  border-radius: var(--radius);
+}
+
+.skill-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(13, 110, 253, 0.06);
+}
+
+/* ----------------------------------------------------
+   FOOTER + SOCIAL ICONS
+---------------------------------------------------- */
+footer {
+  background: var(--bg);
+}
+
+.social-link {
+  color: #6c757d;
+  transition: color .2s ease, transform .2s ease;
+  display: inline-block;
+}
+
+.social-link:hover {
+  color: var(--primary);
+  transform: translateY(-2px);
+}
+
+/* ----------------------------------------------------
+   RESPONSIVE TWEAKS
+---------------------------------------------------- */
+@media (max-width: 991px) {
+  .avatar-placeholder {
+    width: 180px;
+    height: 180px;
+  }
+
+  .hero {
+    text-align: center;
+  }
+
+  .hero .col-lg-7 {
+    order: 2;
+  }
+
+  .hero .col-lg-5 {
+    order: 1;
+  }
+}
