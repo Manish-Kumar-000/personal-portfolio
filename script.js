@@ -72,13 +72,13 @@ document.getElementById("contactForm").addEventListener("submit", function (e) {
 // ------------------------------
 
 // Resume Path
-const resumePath = "assets/resume/Manish_Kumar_Resume.pdf";
+const resumePath = "assets/resume/Manish_Kumar_Metturu_Resume.pdf";
 
 // Download Resume
 document.getElementById("downloadResume").addEventListener("click", () => {
     const link = document.createElement("a");
     link.href = resumePath;
-    link.download = "Manish_Kumar_Resume.pdf";
+    link.download = "Manish_Kumar_Metturu_Resume.pdf";
     link.click();
 });
 
