@@ -1,274 +1,567 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Manish Kumar — Portfolio</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
 
-  <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
-  <!-- Google Fonts (optional for nicer headings) -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
 
-  <!-- Custom CSS -->
-  <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <!-- NAVBAR -->
-  <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
-    <div class="container">
-      <a class="navbar-brand fw-bold" href="#">Manish<span class="text-primary">.</span></a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu"
-        aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+<!-- NAVBAR -->
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg px-4 py-3">
+    <a class="navbar-brand text-primary fw-bold" href="#">Manish Kumar</a>
 
-      <div class="collapse navbar-collapse" id="navMenu">
-        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
-          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-          <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
-          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
-          <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
-          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-          <li class="nav-item ms-3"><a class="btn btn-primary btn-sm" href="#contact">Hire Me</a></li>
+    <button class="navbar-toggler text-primary" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <i class="bi bi-list fs-1"></i>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navMenu">
+
+        <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-4">
+
+            <li class="nav-item">
+                <a class="nav-link nav-item-link" href="#about">About</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link nav-item-link" href="#services">Services</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link nav-item-link" href="#skills">Skills</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link nav-item-link" href="#certifications">Certifications</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link nav-item-link" href="#projects">Projects</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link nav-item-link" href="#contact">Contact</a>
+            </li>
+
+            <!-- HIRE ME BUTTON -->
+            <li class="nav-item ms-lg-3">
+                <a class="btn btn-primary px-3" href="#contact">Hire Me</a>
+            </li>
+
+            <!-- THEME TOGGLE -->
+            <li class="nav-item ms-3">
+                <button id="themeToggle" class="theme-btn">
+                    <i class="bi bi-moon"></i>
+                </button>
+            </li>
+
         </ul>
-      </div>
-    </div>
-  </nav>
 
-  <!-- HERO -->
-  <header class="hero py-5">
-    <div class="container">
-      <div class="row align-items-center gy-4">
+    </div>
+</nav>
+
+
+<!-- HERO SECTION -->
+<section class="hero container">
+    <div class="row align-items-center">
+
+        <!-- LEFT TEXT -->
         <div class="col-lg-7">
-          <small class="text-uppercase text-muted">Hello, I'm</small>
-          <h1 class="display-5 fw-bold">Manish Kumar</h1>
-          <p class="lead text-muted">Computer Science graduate • Frontend Developer • Building responsive web interfaces with HTML, CSS, JavaScript and Bootstrap.</p>
+            <p class="text-muted mb-1">HELLO, I'M</p>
+            <h1 class="mb-3">Manish <span class="highlight">Kumar</span></h1>
+            <h3 class="text-primary mb-4">Frontend Developer</h3>
 
-          <div class="mt-4">
-            <a class="btn btn-outline-primary me-2" href="#projects">View Projects</a>
-            <a class="btn btn-primary" href="#contact">Contact Me</a>
-          </div>
+            <p class="mb-4">
+                Passionate about building clean, modern, and responsive websites.
+                Skilled in HTML, CSS, JavaScript, Bootstrap and learning React.
+            </p>
 
-          <ul class="list-unstyled mt-4 text-muted small">
-            <li>• Proficient in HTML, CSS, JavaScript, Bootstrap</li>
-            <li>• Familiar with React (components & props), SQL, Python</li>
-          </ul>
+            <!-- RESUME BUTTONS (JS WILL HANDLE FUNCTIONALITY) -->
+            <button id="downloadResume" class="btn btn-primary px-4 me-2">
+                <i class="bi bi-download"></i> Download Resume
+            </button>
+
+<button id="viewResume" class="btn btn-outline-primary px-4">
+  <i class="bi bi-eye"></i> View Resume
+</button>
+
         </div>
 
-        <div class="col-lg-5 text-center">
-          <!-- placeholder circular developer image (SVG) -->
-          <div class="avatar-placeholder mx-auto">
-            <!-- simple SVG avatar; replace with your photo later -->
-            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" class="w-100 h-100">
-              <defs>
-                <linearGradient id="g" x1="0" x2="1">
-                  <stop offset="0" stop-color="#cfe8ff"/>
-                  <stop offset="1" stop-color="#ffffff"/>
-                </linearGradient>
-              </defs>
-              <rect rx="20" width="100%" height="100%" fill="url(#g)"/>
-              <g transform="translate(40,30)" fill="#6c757d">
-                <circle cx="60" cy="50" r="40" fill="#e9ecef"/>
-                <circle cx="60" cy="46" r="30" fill="#dee2e6"/>
-                <rect x="15" y="110" width="90" height="20" rx="10" fill="#dee2e6"/>
-              </g>
-            </svg>
-          </div>
-          <p class="text-muted mt-3">Profile photo (placeholder) — will replace later</p>
-        </div>
-      </div>
-    </div>
-  </header>
-
-  <!-- ABOUT -->
-  <section id="about" class="py-5 bg-light">
-    <div class="container">
-      <h2 class="h3 fw-bold mb-3">About Me</h2>
-      <div class="row">
-        <div class="col-lg-8">
-          <p>Self-driven and disciplined Computer Science graduate with a passion for building clean, responsive web interfaces. I enjoy learning new tools and improving my development workflow.</p>
-          <p class="mb-0"><strong>Technologies I work with:</strong> HTML, CSS, JavaScript, Bootstrap, React (basic), SQL, Python.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- SKILLS -->
-  <section id="skills" class="py-5">
-    <div class="container">
-      <h2 class="h3 fw-bold mb-4">Skills</h2>
-
-      <div class="row g-3">
-        <!-- skill card -->
-        <div class="col-6 col-md-4 col-lg-3">
-          <div class="skill-card p-3 text-center rounded">
-            <div class="fs-3 mb-2">HTML</div>
-            <div class="small text-muted">Markup, semantic HTML</div>
-          </div>
-        </div>
-
-        <div class="col-6 col-md-4 col-lg-3">
-          <div class="skill-card p-3 text-center rounded">
-            <div class="fs-3 mb-2">CSS</div>
-            <div class="small text-muted">Flexbox, Grid, responsive layout</div>
-          </div>
-        </div>
-
-        <div class="col-6 col-md-4 col-lg-3">
-          <div class="skill-card p-3 text-center rounded">
-            <div class="fs-3 mb-2">JavaScript</div>
-            <div class="small text-muted">DOM, ES6+, async</div>
-          </div>
-        </div>
-
-        <div class="col-6 col-md-4 col-lg-3">
-          <div class="skill-card p-3 text-center rounded">
-            <div class="fs-3 mb-2">Bootstrap</div>
-            <div class="small text-muted">Responsive UI, components</div>
-          </div>
-        </div>
-
-        <div class="col-6 col-md-4 col-lg-3">
-          <div class="skill-card p-3 text-center rounded">
-            <div class="fs-3 mb-2">React</div>
-            <div class="small text-muted">Components & props (basic)</div>
-          </div>
-        </div>
-
-        <div class="col-6 col-md-4 col-lg-3">
-          <div class="skill-card p-3 text-center rounded">
-            <div class="fs-3 mb-2">SQL</div>
-            <div class="small text-muted">Basic queries & DB concepts</div>
-          </div>
-        </div>
-
-        <div class="col-6 col-md-4 col-lg-3">
-          <div class="skill-card p-3 text-center rounded">
-            <div class="fs-3 mb-2">Python</div>
-            <div class="small text-muted">Scripting & basic projects</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- PROJECTS -->
-  <section id="projects" class="py-5 bg-light">
-    <div class="container">
-      <h2 class="h3 fw-bold mb-4">Projects</h2>
-
-      <div class="row g-4">
-        <div class="col-md-6">
-          <div class="card h-100">
-            <div class="card-body">
-              <h5 class="card-title">AI-Health Care Chat Bot</h5>
-              <p class="card-text">NLP-based chatbot that provides basic health info, symptom guidance, and care recommendations.</p>
-              <p class="small text-muted mb-0">HTML • JS • Python</p>
+        <!-- RIGHT IMAGE -->
+        <div class="col-lg-5 d-flex justify-content-center align-items-center mt-5 mt-lg-0">
+            <div class="avatar-wrapper">
+                <img src="assets/profile.jpg" class="avatar-profile" alt="profile">
             </div>
-          </div>
+
         </div>
 
-        <div class="col-md-6">
-          <div class="card h-100">
-            <div class="card-body">
-              <h5 class="card-title">Dynamic To-Do App</h5>
-              <p class="card-text">A to-do list app with add, delete, and mark-as-complete features.</p>
-              <p class="small text-muted mb-0">HTML • CSS • JavaScript</p>
+    </div>
+</section>
+<!-- ABOUT SECTION -->
+<section id="about" class="about container py-5">
+    
+    <div class="row align-items-center">
+
+        <!-- LEFT SIDE TEXT -->
+        <div class="col-lg-7">
+
+            <h2 class="section-title mb-3">About Me</h2>
+
+            <p class="about-text">
+                I am a self-driven and disciplined Computer Science graduate with a strong passion for 
+                building clean, responsive, and user-friendly web applications.  
+                Known for being honest, resilient, and highly competitive, I enjoy solving real-world 
+                problems through code and continuously improving my technical skills.
+            </p>
+
+            <p class="about-text">
+                With hands-on experience in creating front-end interfaces using HTML, CSS, JavaScript, 
+                and Bootstrap, along with beginner-level knowledge in React and Python, I aim to grow 
+                as a full-stack developer. I enjoy learning new technologies and working in environments 
+                where consistency, integrity, and teamwork matter.
+            </p>
+
+            <div class="mt-4">
+                <h5 class="fw-bold text-primary">Highlights:</h5>
+                <ul class="about-highlights">
+                    <li>Strong understanding of HTML, CSS, JavaScript & Bootstrap</li>
+                    <li>Basic React knowledge (components, props)</li>
+                    <li>SQL knowledge for data handling & backend connectivity</li>
+                    <li>Python basics for automation & logic building</li>
+                    <li>Growth-oriented mindset with strong work ethic</li>
+                    <li>Quick learner and passionate about improving skills</li>
+                </ul>
             </div>
+
+        </div>
+
+        <!-- RIGHT SIDE EDUCATION CARD -->
+        <div class="col-lg-5 mt-5 mt-lg-0">
+            <div class="education-card p-4">
+                <h4 class="fw-semibold mb-3 text-primary">Education</h4>
+
+                <div class="edu-item mb-3">
+                    <h6 class="fw-bold">B-Tech (Computer Science & Engineering)</h6>
+                    <p class="m-0 small">Visakha Institute of Engineering and Technology (2021 – 2024)</p>
+                    <p class="m-0 small text-muted">CGPA: 7.02</p>
+                </div>
+
+                <div class="edu-item mb-3">
+                    <h6 class="fw-bold">Diploma (Mechanical Engineering)</h6>
+                    <p class="m-0 small">NSRIT College (2018 – 2021)</p>
+                    <p class="m-0 small text-muted">Percentage: 70%</p>
+                </div>
+
+                <div class="edu-item">
+                    <h6 class="fw-bold">10th Class</h6>
+                    <p class="m-0 small">D.A.V Public School (2017 – 2018)</p>
+                    <p class="m-0 small text-muted">CGPA: 9.2</p>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- SERVICES SECTION -->
+<section id="services" class="services container py-5">
+    <div class="text-center mb-5">
+        <h2 class="section-title">Services</h2>
+        <p class="text-muted">What I can help you with</p>
+    </div>
+
+    <div class="row g-4">
+
+        <!-- SERVICE 1 -->
+        <div class="col-md-6 col-lg-4">
+            <div class="service-card p-4">
+                <div class="service-icon">
+                    <i class="bi bi-window-stack"></i>
+                </div>
+                <h4 class="mt-3">Frontend Web Development</h4>
+                <p>Building responsive, modern, and clean websites using HTML, CSS, JavaScript & Bootstrap.</p>
+            </div>
+        </div>
+
+        <!-- SERVICE 2 -->
+        <div class="col-md-6 col-lg-4">
+            <div class="service-card p-4">
+                <div class="service-icon">
+                    <i class="bi bi-phone"></i>
+                </div>
+                <h4 class="mt-3">Responsive UI / UX Design</h4>
+                <p>Designing user-friendly layouts and ensuring smooth experience on all screen sizes.</p>
+            </div>
+        </div>
+
+        <!-- SERVICE 3 -->
+        <div class="col-md-6 col-lg-4">
+            <div class="service-card p-4">
+                <div class="service-icon">
+                    <i class="bi bi-layers"></i>
+                </div>
+                <h4 class="mt-3">React Component Development</h4>
+                <p>Developing reusable UI components & integrating basic React features like props & state.</p>
+            </div>
+        </div>
+
+        <!-- SERVICE 4 -->
+        <div class="col-md-6 col-lg-4">
+            <div class="service-card p-4">
+                <div class="service-icon">
+                    <i class="bi bi-database-check"></i>
+                </div>
+                <h4 class="mt-3">SQL & Database Handling</h4>
+                <p>Writing SQL queries and integrating basic backend data operations with frontend UI.</p>
+            </div>
+        </div>
+
+        <!-- SERVICE 5 -->
+        <div class="col-md-6 col-lg-4">
+            <div class="service-card p-4">
+                <div class="service-icon">
+                    <i class="bi bi-terminal"></i>
+                </div>
+                <h4 class="mt-3">Python Scripting</h4>
+                <p>Creating small automation scripts & simple tools using Python basics and logic building.</p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- SKILLS SECTION -->
+<section id="skills" class="skills-section container py-5">
+
+    <div class="text-center mb-5">
+        <h2 class="section-title">Technical Skills</h2>
+        <p class="text-muted">Technologies I work with</p>
+    </div>
+
+    <div class="row g-4">
+
+        <!-- HTML -->
+        <div class="col-6 col-sm-4 col-lg-3">
+            <div class="skill-card">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" class="skill-img" alt="HTML">
+                <p>HTML</p>
+            </div>
+        </div>
+
+        <!-- CSS -->
+        <div class="col-6 col-sm-4 col-lg-3">
+            <div class="skill-card">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" class="skill-img" alt="CSS">
+                <p>CSS</p>
+            </div>
+        </div>
+
+        <!-- JS -->
+        <div class="col-6 col-sm-4 col-lg-3">
+            <div class="skill-card">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" class="skill-img" alt="JavaScript">
+                <p>JavaScript</p>
+            </div>
+        </div>
+
+        <!-- Bootstrap -->
+        <div class="col-6 col-sm-4 col-lg-3">
+            <div class="skill-card">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" class="skill-img" alt="Bootstrap">
+                <p>Bootstrap</p>
+            </div>
+        </div>
+
+        <!-- React -->
+        <div class="col-6 col-sm-4 col-lg-3">
+            <div class="skill-card">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" class="skill-img" alt="React">
+                <p>React (Basics)</p>
+            </div>
+        </div>
+
+        <!-- SQL -->
+        <div class="col-6 col-sm-4 col-lg-3">
+            <div class="skill-card">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" class="skill-img" alt="SQL">
+                <p>SQL</p>
+            </div>
+        </div>
+
+        <!-- Python -->
+        <div class="col-6 col-sm-4 col-lg-3">
+            <div class="skill-card">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" class="skill-img" alt="Python">
+                <p>Python</p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- ===================== CERTIFICATIONS SECTION ===================== -->
+<section id="certifications" class="py-5">
+  <div class="container">
+    <h2 class="section-title text-center mb-5">Certifications</h2>
+
+    <div id="certsGrid" class="certs-grid"></div>
+  </div>
+</section>
+
+<!-- ===================== MODAL ===================== -->
+<div id="certsModal" class="certs-modal" aria-hidden="true" role="dialog">
+  <div class="certs-modal-backdrop"></div>
+
+  <div class="certs-modal-inner" role="document" aria-modal="true">
+    <button class="certs-modal-close" id="certsModalClose">✕</button>
+
+    <div class="certs-modal-content">
+      <img id="certsModalImg" src="" alt="Certificate preview">
+
+      <div class="certs-modal-actions">
+        <a id="certModalDownload" class="certs-btn certs-btn--download" href="#" download>
+          <i class="bi bi-download"></i> Download Image
+        </a>
+
+        <button id="certModalOpenPdf" class="certs-btn certs-btn--view">
+  <i class="bi bi-box-arrow-up-right"></i> Open Image
+</button>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- PROJECTS SECTION -->
+<section id="projects" class="projects-section container py-5">
+
+    <div class="text-center mb-5">
+        <h2 class="section-title">Projects</h2>
+        <p class="text-muted">Some of the work I’ve built and what I'm currently working on</p>
+    </div>
+
+    <div class="row g-4">
+
+        <!-- Project 1 - AI Chatbot -->
+        <div class="col-lg-4 col-md-6">
+            <div class="project-card">
+                <h4>AI HealthCare Chatbot</h4>
+                <p class="project-tech">Python • Flask • NLP • NumPy • Pandas • Matplotlib</p>
+
+                <p>
+                    Developed an NLP-powered health assistant that provides symptom insights,
+                    basic health information, and care recommendations using machine learning 
+                    and real-time text processing.
+                </p>
+
+                <ul class="project-points">
+                    <li>Built NLP engine to understand user queries</li>
+                    <li>Created Flask backend for fast responses</li>
+                    <li>Used Pandas & NumPy for data operations</li>
+                    <li>Generated health insights with Matplotlib</li>
+                </ul>
+
+                <!-- Buttons -->
+                <div class="project-btns">
+                    <a href="#" class="project-btn live">Live Demo</a>
+                    <a href="#" class="project-btn code">View Code</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Project 2 - Todo App -->
+        <div class="col-lg-4 col-md-6">
+            <div class="project-card">
+                <h4>Dynamic Todo List App</h4>
+                <p class="project-tech">HTML • CSS • JavaScript • DOM • LocalStorage</p>
+
+                <p>
+                    A fully interactive Todo app where tasks can be added, deleted and saved using 
+                    localStorage. Built to strengthen DOM manipulation & data persistence concepts.
+                </p>
+
+                <ul class="project-points">
+                    <li>Real-time task creation & deletion</li>
+                    <li>Used .findIndex() & .splice() for task management</li>
+                    <li>Implemented localStorage data persistence</li>
+                    <li>Responsive UI using DOM events</li>
+                </ul>
+
+                <!-- Buttons -->
+                <div class="project-btns">
+                    <a href="#" class="project-btn live">Live Demo</a>
+                    <a href="#" class="project-btn code">View Code</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Project 3 - React E-Commerce -->
+        <div class="col-lg-4 col-md-6">
+            <div class="project-card">
+                <h4>React E-Commerce Website (In Progress)</h4>
+                <p class="project-tech">React • Components • Props • Hooks</p>
+
+                <p>
+                    Developing a feature-rich E-Commerce platform using React. 
+                    Learning modern component architecture, routing, state and UI logic.
+                </p>
+
+                <ul class="project-points">
+                    <li>Reusable component structure</li>
+                    <li>Product listings & cart system</li>
+                    <li>State management using Hooks</li>
+                    <li>Backend integration coming soon</li>
+                </ul>
+
+                <!-- Buttons -->
+                <div class="project-btns">
+                    <a href="#" class="project-btn disabled">Coming Soon</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Project 4 - Portfolio Website (Centered Card) -->
+        <div class="col-12 d-flex justify-content-center">
+            <div class="col-lg-4 col-md-6">
+                <div class="project-card">
+                    <h4>Personal Portfolio Website</h4>
+                    <p class="project-tech">HTML • CSS • JavaScript • Bootstrap • GitHub Pages</p>
+
+                    <p>
+                        Designed and built a modern responsive portfolio website with theme switching,
+                        reusable UI sections, animations, and GitHub deployment workflow.
+                    </p>
+
+                    <ul class="project-points">
+                        <li>Dark/Light theme toggle</li>
+                        <li>Clean modular component-based sections</li>
+                        <li>Mobile-first responsive layout</li>
+                        <li>Deployed using GitHub Pages</li>
+                    </ul>
+
+                    <!-- Buttons -->
+                    <div class="project-btns">
+                        <a href="#" class="project-btn live">Live Demo</a>
+                        <a href="#" class="project-btn code">View Code</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+<!-- CONTACT SECTION -->
+<!-- CONTACT SECTION -->
+<section id="contact" class="contact-section py-5">
+  <div class="container">
+
+    <h2 class="section-title text-center mb-5">Let's Build Something Together</h2>
+
+    <div class="row g-4">
+
+      <!-- LEFT BOX: CONTACT DETAILS -->
+      <div class="col-lg-6">
+        <div class="contact-card p-4 shadow-sm rounded">
+
+          <h4 class="fw-bold mb-3">Contact Details</h4>
+          <p class="text-muted">
+            Feel free to reach out for freelance work, collaborations, or job opportunities.
+          </p>
+
+          <!-- EMAIL -->
+          <p class="mt-3 mb-1">
+            <i class="bi bi-envelope text-primary me-2"></i>
+            <a href="mailto:makeforall123@gmail.com" class="contact-link">
+              makeforall123@gmail.com
+            </a>
+          </p>
+
+          <!-- PHONE -->
+          <p class="mb-3">
+            <i class="bi bi-telephone text-primary me-2"></i>
+            <a href="tel:+919701651904" class="contact-link">
+              +91 9701651904
+            </a>
+          </p>
+
+          <!-- SOCIAL ICONS -->
+          <div class="social-icons mt-3">
+            <a href="https://www.linkedin.com/in/manish-kumar-267607336/" target="_blank" class="social-link"><i class="bi bi-linkedin"></i></a>
+            <a href="https://github.com/Manish-Kumar-000" target="_blank" class="social-link"><i class="bi bi-github"></i></a>
+            <a href="https://www.instagram.com/de.mon921/"target="_blank" class="social-link"><i class="bi bi-instagram"></i></a>
+            <a href="https://discord.com/users/YOUR_DISCORD" target="_blank" class="social-link"><i class="bi bi-discord"></i></a>
           </div>
+
         </div>
       </div>
 
-    </div>
-  </section>
+      <!-- RIGHT BOX: FORM -->
+      <div class="col-lg-6">
+        <div class="contact-card p-4 shadow-sm rounded">
 
-  <!-- EDUCATION -->
-  <section id="education" class="py-5">
-    <div class="container">
-      <h2 class="h3 fw-bold mb-3">Education</h2>
+          <h4 class="fw-bold mb-3">Send a Message</h4>
 
-      <div class="row gy-3">
-        <div class="col-md-6">
-          <div class="card p-3">
-            <h5 class="mb-1">B-Tech</h5>
-            <div class="small text-muted">Visakha Institute of Engineering and Technology — 2021 - 2024</div>
-            <p class="mt-2 mb-0">Completed course in Computer Science and Engineering. CGPA: 7.02</p>
-          </div>
-        </div>
-
-        <div class="col-md-6">
-          <div class="card p-3">
-            <h5 class="mb-1">Diploma</h5>
-            <div class="small text-muted">NSRIT College — 2018 - 2021</div>
-            <p class="mt-2 mb-0">Mechanical Engineering — Percentage: 70%</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CERTIFICATIONS -->
-  <section id="certifications" class="py-5 bg-light">
-    <div class="container">
-      <h2 class="h3 fw-bold mb-3">Certifications</h2>
-      <ul>
-        <li>Introduction to Databases</li>
-        <li>Build your own Static Website</li>
-        <li>Build your own Responsive Website</li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- CONTACT -->
-  <section id="contact" class="py-5">
-    <div class="container">
-      <h2 class="h3 fw-bold mb-3">Get in touch</h2>
-      <div class="row g-4">
-        <div class="col-lg-6">
-          <p>If you'd like to work together or just say hi — drop a message below.</p>
-          <ul class="list-unstyled small text-muted">
-            <li>📧 Email: <span class="text-dark">your.email@example.com</span></li>
-            <li>📍 Visakhapatnam, India</li>
-          </ul>
-        </div>
-
-        <div class="col-lg-6">
           <form id="contactForm">
-            <div class="mb-3">
-              <label class="form-label">Full name</label>
-              <input class="form-control" type="text" id="name" required>
-            </div>
 
-            <div class="mb-3">
-              <label class="form-label">Email</label>
-              <input class="form-control" type="email" id="email" required>
-            </div>
+            <label class="form-label">Your Name</label>
+            <input type="text" class="form-control mb-3" id="name" required>
 
-            <div class="mb-3">
-              <label class="form-label">Message</label>
-              <textarea class="form-control" id="message" rows="4" required></textarea>
-            </div>
+            <label class="form-label">Your Email</label>
+            <input type="email" class="form-control mb-3" id="email" required>
 
-            <button class="btn btn-primary" type="submit">Send Message</button>
-            <div id="contactAlert" class="mt-3" style="display:none;"></div>
+            <label class="form-label">Message</label>
+            <textarea class="form-control mb-3" rows="5" id="message" required></textarea>
+
+            <button type="submit" class="btn btn-primary px-4">
+              Send Message
+            </button>
+
           </form>
+
         </div>
       </div>
-    </div>
-  </section>
 
-  <!-- FOOTER -->
-  <footer class="py-4 bg-white border-top">
-    <div class="container text-center small text-muted">
-      © <span id="year"></span> Manish Kumar — Built with HTML, CSS, JavaScript & Bootstrap
     </div>
-  </footer>
 
-  <!-- Bootstrap JS bundle -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="script.js"></script>
+  </div>
+</section>
+
+
+
+<!-- FOOTER -->
+<footer class="footer py-4 text-center">
+
+    <div class="footer-icons mb-2">
+        <a href="https://facebook.com/YOUR_FACEBOOK" target="_blank" class="social-link mx-2"><i class="bi bi-facebook"></i></a>
+        <a href="https://www.instagram.com/de.mon921/" target="_blank" class="social-link mx-2"><i class="bi bi-instagram"></i></a>
+        <a href="https://twitter.com/YOUR_TWITTER" target="_blank" class="social-link mx-2"><i class="bi bi-twitter"></i></a>
+        <a href="https://www.linkedin.com/in/manish-kumar-267607336/" target="_blank" class="social-link mx-2"><i class="bi bi-linkedin"></i></a>
+    </div>
+    © 2024 Manish Kumar — Portfolio Website
+
+</footer>
+
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+<script src="script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
